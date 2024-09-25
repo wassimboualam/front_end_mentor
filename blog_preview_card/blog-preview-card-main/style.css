@@ -1,0 +1,126 @@
+:root {
+    --yellow:hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+    --mar-top:calc((100vh - 522px) / 2);
+    --gap: 20px;
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url(Figtree/Figtree-VariableFont_wght.ttf);
+}
+
+body {
+    text-align: center;
+    font-family: Figtree;
+    font-size: 16px;
+    height: 100%;
+    background-color: var(--yellow);
+}
+
+main, #illustration {
+    border-radius: 15px;
+}
+
+/* main's styles */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: var(--gap);
+    width: 336px;
+    height: 474px;
+    margin: auto;
+    margin-top: var(--mar-top);
+    margin-bottom: 10px;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    box-shadow: 10px 10px 0px var(--black);
+    text-align: left;
+    padding: 24px;
+}
+
+
+
+
+/* #text div styles */
+
+#text {
+    width: 336px;
+    height: 194px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h4, span {
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h4 {
+    padding-left: 0%;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+span {
+    background-color: var(--yellow);
+    font-size: 0.9em;
+}
+
+#time {
+    display: block;
+    font-size: 0.8em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+p {
+    color: var(--grey);
+    font-weight: 300;
+    margin-top: 0%;
+}
+
+#author {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+/* Hover mode */
+main:hover {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    box-shadow: 15px 15px 0px var(--black);
+}
+
+#text > *:hover , #author:hover strong{
+    color : var(--yellow);
+}
+
+h4:hover > span{
+    color: black;
+}
+
+/*mobile mode*/
+@media screen and (max-width : 376px) {
+    main {
+        width: 279px;
+        height: 453px;
+        padding: 16px;
+    }
+    #illustration, #text {
+        width: 279px;
+    }
+    
+}

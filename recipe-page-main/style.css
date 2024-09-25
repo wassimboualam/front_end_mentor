@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+:root {
+    --nutmeg : hsl(14, 45%, 36%);
+    --dark-raspberry : hsl(332, 51%, 32%);
+    --white : hsl(0, 0%, 100%);
+    --rose-white : hsl(330, 100%, 98%);
+    --eggshell : hsl(30, 54%, 90%);
+    --light-grey : hsl(30, 18%, 87%);
+    --wenge-brown : hsl(30, 10%, 34%);
+    --dark-charcoal : hsl(24, 5%, 18%);
+}
+
+html {
+    font-size: 16px;
+    font-family: Outfit;
+    color: var(--wenge-brown);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1950px;
+    background-color: var(--eggshell);
+}
+
+
+main {
+    max-width: 700px;
+    min-height: 100px;
+    background-color: var(--white);
+    padding: 40px;
+    padding-top: 45x;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section:last-child {
+    border: 0cap;
+}
+   
+
+section > * {
+    margin-top: 0%;
+}
+
+h1, h2, h3 {
+    font-family: "Young Serif";
+}
+
+
+h1 {
+    color: var(--dark-charcoal);
+    font-size: 2.5em;
+}
+
+section:has(>h2) {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+h2 {
+    font-size: 2em;
+}
+
+td:last-child {
+    color: var(--nutmeg);
+    font-weight: 600;
+}
+
+section:has(> h3) {
+    background-color: var(--rose-white);
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+h3 {
+    color: var(--dark-raspberry);
+}
+
+ul {
+    margin-bottom: 0%;
+}
+
+ul, ol {
+    padding-left: 5px;
+    padding-right: 0%;
+}
+
+li {
+    padding-left: 20px;
+    margin: 1em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+td {
+    border-top: 1px solid var(--light-grey);
+    padding: 10px;
+    padding-left: 20px;
+}
+
+tr:first-child  td{
+    border: 0;
+}
+
+
+@media screen and (max-width : 376px) {
+    body {
+        display: block;
+        margin: 0%;
+        background-color: white;
+    }
+    main {
+        padding: 0px;
+    }
+    
+    main>* {
+        margin: 2em;
+    }
+    img {
+        border-radius: 0%;
+    }
+    figure {
+        margin: 0%;
+    }
+    section:has(>h3) {
+        width: 80%;
+    }
+    li,ul,ol {
+        padding-left: 10px;
+    }
+}

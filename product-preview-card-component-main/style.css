@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --main-width : min(580px, 90vw);
+    --main-height : calc(var(--main-width) * 0.75);
+    --aside-x-margin : calc(var(--main-height) * 35 / 500);
+    --aside-y-margin : calc(var(--main-height) * 20 / 500);
+}
+
+html {
+    font-size: 14px;
+    font-family: Montserrat;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Cream);
+}
+
+main {
+    width: var(--main-width);
+    height: var(--main-height);
+    max-height: 100vh;
+    background-color: var(--White);
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: calc(var(--main-width) / 2);
+    justify-self: start;
+}
+
+aside {
+    margin: var(--aside-y-margin);
+    margin-left: var(--aside-x-margin);
+    margin-right: var(--aside-x-margin);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+aside > * {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+span, p, del {
+    color: var(--Dark-grayish-blue);
+}
+
+h1, strong, button {
+    font-family: Fraunces;
+}
+
+span {
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+}
+
+h1 {
+    font-size: 2.3rem;
+    color: var(--Very-dark-blue);
+}
+
+div {
+    min-width: 70%;
+    width: 180px;
+}
+
+strong {
+    color: var(--Dark-cyan);
+    font-size: 2rem;
+}
+
+del {
+    float: right;
+}
+
+button {
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 3.3rem;
+    border-width: 0cap;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button > img{
+    height: 1rem;
+}
+
+
+button:hover {
+    background-color: hsl(158, 36%, 30%);
+}
+
+button:active {
+    background-color: hsl(158, 36%, 20%);
+}
+
+@media screen and (max-width : 560px) {
+    :root {
+        --main-height : 90vh;
+        --aside-x-margin : 30px;
+        --aside-y-margin : 20px;
+        --aside-mobile-height : calc(var(--main-height) - var(--main-width) * .7 - var(--aside-y-margin) * 2);
+    }
+    main {
+        display: block;        
+    }
+    
+    figure img {
+        width: var(--main-width);
+    }
+
+    aside {
+        min-height: var(--aside-mobile-height);
+    }
+}

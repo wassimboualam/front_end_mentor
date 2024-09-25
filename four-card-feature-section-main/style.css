@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /*primary*/
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    /*neutral*/
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    /*dimensions*/
+    --card-width: 330px;
+    --card-height: 250px;
+    --card-x-pad: 30px;
+}
+
+html {
+    font-size: 15px;
+    font-family: Poppins;
+}
+
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    margin: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: var(--very-dark-blue);
+    font-weight: 600;
+}
+
+span, p {
+    color: var(--grayish-blue);
+}
+
+h1, main>p {
+    max-width: 500px;
+    margin: auto;
+}
+
+span {
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+main > p {
+    margin-top: 30px;
+}
+
+.cards {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    border-top: 3px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    padding-left: var(--card-x-pad);
+    padding-right: var(--card-x-pad);
+    font-size: 13px;
+    height: var(--card-height);
+    width: var(--card-width);
+    text-align: left;
+}
+
+.card.cyan {
+    border-top-color: var(--cyan);
+}
+
+.card.red {
+    border-top-color: var(--red);
+}
+
+.card.orange {
+    border-top-color: var(--orange);
+}
+
+.card.blue {
+    border-top-color: var(--blue);
+}
+
+.card img {
+    margin-left: auto;
+    display: block;
+}
+
+@media all and (min-width: 720px) {
+    .cards {
+        height: calc(var(--card-height) * 2.5);
+    }
+}
+
+@media all and (min-width: 1050px) {
+    .card:first-child, .card:last-child {
+        margin-top: calc(var(--card-height) / 2);
+        margin-bottom: calc(var(--card-height) / 2);
+    }
+}
